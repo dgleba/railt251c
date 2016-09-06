@@ -117,3 +117,6 @@ def ask_with_default(question, color, default)
 end
 
 apply_template!
+
+puts "Reached the end of template creation routine."
+puts
