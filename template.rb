@@ -45,7 +45,8 @@ def apply_template!
   
   # run 'rails generate scaffold User email:string crypted_password:string salt:string --no-migration --skip'
 
-  # apply 'dg/tpcustomer.rb'
+  apply 'dg/tpcustomer.rb'
+  
   # $repo1 = 'https://raw.githubusercontent.com/dgleba/rails-template-dg1/master/'
   # rake 'rails:template LOCATION=#{$repo1}dg/tpcustomer.rb'
      
@@ -74,7 +75,7 @@ def add_template_repository_to_source_path
     at_exit { FileUtils.remove_entry(tempdir) }
     git clone: [
       '--quiet',
-      'https://github.com/dgleba/rails-template-dg1.git',
+      'https://github.com/dgleba/railt251c.git',
       tempdir
     ].map(&:shellescape).join(' ')
   else
