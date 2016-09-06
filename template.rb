@@ -45,16 +45,21 @@ def apply_template!
   
   # run 'rails generate scaffold User email:string crypted_password:string salt:string --no-migration --skip'
 
-  apply 'dg/tpcustomer.rb'
   
   # $repo1 = 'https://raw.githubusercontent.com/dgleba/rails-template-dg1/master/'
   # rake 'rails:template LOCATION=#{$repo1}dg/tpcustomer.rb'
      
- 
+  #David Gleba
+  apply 'dg/tpcustomer.rb'
+     
   #migrate and seed and other things..
   run 'bin/setup'
   generate_spring_binstubs
   
+  #David Gleba
+  run 'bin/rake db:populate'
+
+
   # setup git
   git :init
   git add: '.'
