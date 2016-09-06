@@ -6,7 +6,7 @@ def apply_variants
   # my answers. dgleba..
   @variant_twitter_bootstrap = true
   @variant_sorcery_cancancan = false
-  @variant_ransack_kaminari = false
+  @variant_ransack_kaminari = true
   @variant_sidekiq = false
 
   
