@@ -41,26 +41,26 @@ group :development, :test do
   gem 'byebug'
   gem 'pry-byebug'
   gem 'better_errors'
-  gem 'binding_of_caller'
-  gem 'quiet_assets'
-  gem 'letter_opener'
-  gem 'bullet'
-  gem 'database_cleaner'
-  gem 'coderay'
+#  gem 'binding_of_caller'
+#  gem 'quiet_assets'
+#  gem 'letter_opener'
+#  gem 'bullet'
+#  gem 'database_cleaner'
+#  gem 'coderay'
   gem 'rspec-rails', '~> 3.4'
   gem 'factory_girl_rails', '~> 4.5'
-  gem 'shoulda-matchers', '~> 3.0'
-  gem 'simplecov'
-  gem 'simplecov-console'
-  gem 'rails-erd'
+#  gem 'shoulda-matchers', '~> 3.0'
+#  gem 'simplecov'
+#  gem 'simplecov-console'
+#  gem 'rails-erd'
   gem 'awesome_print'
-  gem 'brakeman', require: false
+#  gem 'brakeman', require: false
 
-  gem 'capybara'
+#  gem 'capybara'
   # selenium-webdriver & chromedriver-helper used by
   # JavaScript-dependent feature specs (`js: true`):
-  gem 'selenium-webdriver'
-  gem 'chromedriver-helper'
+#  gem 'selenium-webdriver'
+#  gem 'chromedriver-helper'
 end
 
 gem 'marco-polo'
