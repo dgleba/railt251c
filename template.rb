@@ -67,7 +67,7 @@ def apply_template!
     #David Gleba
   run 'bin/rake db:populate'
   
-  pits
+  puts
   puts "Reached the end of template creation routine."
   puts
 
