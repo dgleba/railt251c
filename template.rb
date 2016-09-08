@@ -56,8 +56,6 @@ def apply_template!
   run 'bin/setup'
   generate_spring_binstubs
   
-  #David Gleba
-  run 'bin/rake db:populate'
 
 
   # setup git
@@ -65,6 +63,14 @@ def apply_template!
   git add: '.'
   git commit: "-aqm 'Initial commit'"
   git checkout: '-b develop'
+  
+    #David Gleba
+  run 'bin/rake db:populate'
+  
+  pits
+  puts "Reached the end of template creation routine."
+  puts
+
 end
 
 require 'fileutils'
@@ -118,5 +124,3 @@ end
 
 apply_template!
 
-puts "Reached the end of template creation routine."
-puts
