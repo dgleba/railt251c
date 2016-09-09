@@ -1,9 +1,25 @@
 if apply_twitter_bootstrap?
 
-gsub_file 'lib/templates/haml/scaffold/index.html.haml', 
-    /^= link_to t('actions.create')*/ , 
-    ''
+copy_file 'lib/templates/haml/scaffold/index.html.haml', 'lib/templates/haml/scaffold/index0.html.haml'
+copy_file 'lib/templates/haml/scaffold/index.html.haml', 'lib/templates/haml/scaffold/index3.html.haml'
+copy_file 'lib/templates/haml/scaffold/index.html.haml', 'lib/templates/haml/scaffold/index4.html.haml'
+copy_file 'lib/templates/haml/scaffold/index.html.haml', 'lib/templates/haml/scaffold/index5.html.haml'
 
+o = File.new("lib/templates/haml/scaffold/index2.html.haml", "w+")
+File.each_line('lib/templates/haml/scaffold/index.html.haml') do |li|
+  o.puts li if li !~ /link_to t('actions.create')/
+end
+
+comment_lines 'lib/templates/haml/scaffold/index.html.haml', /link_to t('actions.create')/
+
+gsub_file ('lib/templates/haml/scaffold/index4.html.haml', 
+    /^.*link_to t('actions.create').*\n/ , 
+    '')
+
+gsub_file ('lib/templates/haml/scaffold/index5.html.haml', 
+    "= link_to t('actions.create'), new_<%= singular_table_name %>_path, class: 'btn btn-primary'",
+    ''
+    
 insert_into_file 'lib/templates/haml/scaffold/index.html.haml', after: /%h1= <%= class_name %>.model_name.human\n/ do
     <<-'RUBY'
 
