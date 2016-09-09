@@ -5,10 +5,12 @@ if apply_twitter_bootstrap?
 #backup orginal...
 copy_file 'lib/templates/haml/scaffold/index.html.haml', 'lib/templates/haml/scaffold/index0.html.haml'
 #make copies..
-copy_file 'lib/templates/haml/scaffold/index.html.haml', 'lib/templates/haml/scaffold/index3.html.haml'
+#copy_file 'lib/templates/haml/scaffold/index.html.haml', 'lib/templates/haml/scaffold/index3.html.haml'
 #copy_file 'lib/templates/haml/scaffold/index.html.haml', 'lib/templates/haml/scaffold/index4.html.haml'
 
 #works..
+# regular ruby file processing...
+# idea: ..csd\0-csd\ruby,course,conestoga,college-2016june\copyfile\copy,tempfile,back,to,original,filename,rubyknow.rb
 # o = File.new("lib/templates/haml/scaffold/index2.html.haml", "w+")
 # File.foreach('lib/templates/haml/scaffold/index.html.haml').with_index do |li, index|
   # o.puts li if li !~ /link_to t\('actions.create'\)/
@@ -16,7 +18,7 @@ copy_file 'lib/templates/haml/scaffold/index.html.haml', 'lib/templates/haml/sca
 
 
 # this put a # in front of the line, not a haml comment...
-#comment_lines 'lib/templates/haml/scaffold/index.html.haml', /link_to t\('actions.create'\)/
+# comment_lines 'lib/templates/haml/scaffold/index.html.haml', /link_to t\('actions.create'\)/
 
 #works..
 # match whole line containing pattern , replace with nothing ''. (beginning of line ^ . end of line $)
