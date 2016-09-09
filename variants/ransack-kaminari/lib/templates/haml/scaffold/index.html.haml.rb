@@ -1,4 +1,9 @@
 if apply_twitter_bootstrap?
+
+gsub_file 'lib/templates/haml/scaffold/index.html.haml', 
+    /^.*link_to t('actions.create').*$/ , 
+    ''
+
   insert_into_file 'lib/templates/haml/scaffold/index.html.haml', after: /%h1= <%= class_name %>.model_name.human\n/ do
     <<-'RUBY'
 
