@@ -6,14 +6,15 @@ copy_file 'lib/templates/haml/scaffold/index.html.haml', 'lib/templates/haml/sca
 copy_file 'lib/templates/haml/scaffold/index.html.haml', 'lib/templates/haml/scaffold/index5.html.haml'
 
 o = File.new("lib/templates/haml/scaffold/index2.html.haml", "w+")
-File.each_line('lib/templates/haml/scaffold/index.html.haml') do |li|
-  o.puts li if li !~ /link_to t('actions.create')/
+File.foreach('lib/templates/haml/scaffold/index.html.haml').with_index do |li, index|
+  o.puts li if li !~ /link_to t\('actions.create'\)/
 end
+
 
 comment_lines 'lib/templates/haml/scaffold/index.html.haml', /link_to t('actions.create')/
 
 gsub_file 'lib/templates/haml/scaffold/index4.html.haml', 
-    /^.*link_to t('actions.create').*\n/ , 
+    /^.*link_to t\('actions.create'\).*\n/ , 
     ''
 
 gsub_file 'lib/templates/haml/scaffold/index5.html.haml', 
