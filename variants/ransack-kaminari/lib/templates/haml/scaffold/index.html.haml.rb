@@ -1,5 +1,7 @@
 if apply_twitter_bootstrap?
 
+# remove '..link_to..' line  in the file ....
+
 #backup orginal...
 copy_file 'lib/templates/haml/scaffold/index.html.haml', 'lib/templates/haml/scaffold/index0.html.haml'
 #make copies..
@@ -13,11 +15,12 @@ copy_file 'lib/templates/haml/scaffold/index.html.haml', 'lib/templates/haml/sca
 # end
 
 
-comment_lines 'lib/templates/haml/scaffold/index.html.haml', /link_to t\('actions.create'\)/
+# this put a # in front of the line, not a haml comment...
+#comment_lines 'lib/templates/haml/scaffold/index.html.haml', /link_to t\('actions.create'\)/
 
-#works??..
-# match whole line containing pattern , replace with nothing ''.
-gsub_file 'lib/templates/haml/scaffold/index3.html.haml', 
+#works..
+# match whole line containing pattern , replace with nothing ''. (beginning of line ^ . end of line $)
+gsub_file 'lib/templates/haml/scaffold/index.html.haml', 
     /^.*link_to t\('actions.create'\).*$/ , 
     ''
 
@@ -32,6 +35,7 @@ gsub_file 'lib/templates/haml/scaffold/index3.html.haml',
 # gsub_file 'lib/templates/haml/scaffold/index4.html.haml', 
     # "= link_to t('actions.create'), new_<%= singular_table_name %>_path, class: 'btn btn-primary'",
     # ''
+    
     
     
 insert_into_file 'lib/templates/haml/scaffold/index.html.haml', after: /%h1= <%= class_name %>.model_name.human\n/ do
