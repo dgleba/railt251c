@@ -1,15 +1,15 @@
 if apply_twitter_bootstrap?
 
 gsub_file 'lib/templates/haml/scaffold/index.html.haml', 
-    /^.*link_to t('actions.create').*$/ , 
+    /^= link_to t('actions.create')*/ , 
     ''
 
-  insert_into_file 'lib/templates/haml/scaffold/index.html.haml', after: /%h1= <%= class_name %>.model_name.human\n/ do
+insert_into_file 'lib/templates/haml/scaffold/index.html.haml', after: /%h1= <%= class_name %>.model_name.human\n/ do
     <<-'RUBY'
 
 .row
   .col-sm-2
-    = link_to t('actions.create'), new_customer_path, class: 'btn btn-primary'
+    = link_to t('actions.create'), new_<%= singular_table_name %>_path, class: 'btn btn-primary'
   .col-sm-3
     = search_form_for @q, class: 'search-form' do |f|
       .input-group
