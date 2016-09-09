@@ -12,11 +12,11 @@ end
 
 comment_lines 'lib/templates/haml/scaffold/index.html.haml', /link_to t('actions.create')/
 
-gsub_file ('lib/templates/haml/scaffold/index4.html.haml', 
+gsub_file 'lib/templates/haml/scaffold/index4.html.haml', 
     /^.*link_to t('actions.create').*\n/ , 
-    '')
+    ''
 
-gsub_file ('lib/templates/haml/scaffold/index5.html.haml', 
+gsub_file 'lib/templates/haml/scaffold/index5.html.haml', 
     "= link_to t('actions.create'), new_<%= singular_table_name %>_path, class: 'btn btn-primary'",
     ''
     
