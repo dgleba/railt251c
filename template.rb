@@ -62,7 +62,7 @@ def apply_template!
   git :init
   git add: '.'
   git commit: "-aqm 'Initial commit'"
-  git checkout: '-b develop'
+  #git checkout: '-b develop'
   
     #David Gleba
   run 'bin/rake db:populate'
