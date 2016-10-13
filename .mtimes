@@ -87,7 +87,6 @@
 1473373724|variants/ransack-kaminari/config/template.rb
 1465003625|variants/ransack-kaminari/lib/template.rb
 1473391001|variants/ransack-kaminari/lib/templates/haml/scaffold/index.html.haml.rb
-1473388365|variants/ransack-kaminari/lib/templates/haml/scaffold/thor,app,template,railsknow,dgleba,index.html.haml - Copy.rb
 1465003625|variants/ransack-kaminari/lib/templates/rails/scaffold_controller/controller.rb
 1465003625|variants/ransack-kaminari/spec/helpers/application_helper_spec.rb
 1465003625|variants/ransack-kaminari/spec/template.rb
@@ -135,4 +134,4 @@
 1465003625|variants/twitter-bootstrap/template.rb
 1465003625|vendor/assets/.bowerrc
 1465003625|vendor/template.rb
-1473702229|.mtimes
+1473388365|variants/ransack-kaminari/lib/templates/haml/scaffold/thor,app,template,railsknow,dgleba,index.html.haml - rubytextprocessingCopy.rb
