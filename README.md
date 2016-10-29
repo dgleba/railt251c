@@ -9,11 +9,10 @@ This is trimmed down for testing bootstrap_form or simple_form, bootstrap, kamin
 # Usage
 
 ```
-rails new <project_name> \  
-     -m https://raw.githubusercontent.com/dgleba/railt251c/master/template.rb
+rails new rail283v1 -m https://raw.githubusercontent.com/dgleba/railt251c/master/template.rb
 ```
   
- replace ```<project_name>``` with the project name you want this
+ replace ```rail283v1``` with the project name you want for your new project.
  
 ---
 
