@@ -12,7 +12,12 @@ This is trimmed down for testing bootstrap_form or simple_form, bootstrap, kamin
 rails new rail283v1 -m https://raw.githubusercontent.com/dgleba/railt251c/master/template.rb
 ```
   
- replace ```rail283v1``` with the project name you want for your new project.
+ -replace ```rail283v1``` with the project name you want for your new project.
+ 
+ -start the dev server with ```rail s```
+ 
+ -Visit ```localhost:3000/customers``` to see an example.  
+ 
  
 ---
 
